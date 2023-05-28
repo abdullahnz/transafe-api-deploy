@@ -90,7 +90,7 @@ class ExpressApplication {
       this.app.use('/api/v1/transaction', NegoRoutes);
       this.app.use('/api/v1/chat', ChatRoutes);
       this.app.use('/', (req: any, res: any) => {
-         res.send('Transafe API v1.0');
+         res.status(200).json({message: 'Transafe API v1.0'});
       });
    }
 
