@@ -22,4 +22,4 @@ jobs:
           script: |
             echo $(date) >> transafe-latest-update.txt
             cd ~/transafe-api-deploy && git pull origin main
-            docker cp app/src dffd2b2da083:/usr/src/app/  
+            docker cp app/src 6521660822c0:/usr/src/app/  
