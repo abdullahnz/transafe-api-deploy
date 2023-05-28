@@ -1,0 +1,5 @@
+###
+
+POST http://localhost:1337/api/v1/transaction/1/nego/500000/decline
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQ1MDQ3MjksImV4cCI6MTY4NDU1ODcyOX0.iK5Hw0WPLkRp-vAXG-rh0TsFhen8LGG-A2aVDWB53MQ
+

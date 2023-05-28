@@ -1,0 +1,70 @@
+### CREATE TRANSACTION
+POST http://localhost:1337/api/v1/transaction
+Content-Type: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQyNjk0NzIsImV4cCI6MTY4NDg3NDI3Mn0.X8kzo1vys3ODvXj16grVPC2a753s_vhIVluYUtzT4uI
+
+{
+   "category": "fisik",
+   "name": "HP Samsung A05s",
+   "desc": "Samsung A05s 4/64 minus pemakaian",
+   "price": 2500000,
+   "negotiable": false,
+   "shipping_fee": 26000,
+   "weight": 2000, 
+   "images": "./images/test.png",
+   "tax": 10000
+}
+
+
+
+
+### GET ONE TRANSACTION
+GET http://localhost:1337/api/v1/transaction/23
+Content-Type: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQyNjk0NzIsImV4cCI6MTY4NDg3NDI3Mn0.X8kzo1vys3ODvXj16grVPC2a753s_vhIVluYUtzT4uI
+
+
+
+
+### UPDATE STATUS TRANSACTION
+PUT http://localhost:1337/api/v1/transaction/23
+Content-Type: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQyNjk0NzIsImV4cCI6MTY4NDg3NDI3Mn0.X8kzo1vys3ODvXj16grVPC2a753s_vhIVluYUtzT4uI
+
+{
+   "status": "JOIN"
+}
+
+### GET RECENT TRANSACTION
+GET http://localhost:1337/api/v1/transaction/recent/23
+Content-Type: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQyNjk0NzIsImV4cCI6MTY4NDg3NDI3Mn0.X8kzo1vys3ODvXj16grVPC2a753s_vhIVluYUtzT4uI
+
+### JOIN TRANSACTION
+POST http://localhost:1337/api/v1/transaction/join/f5b53a07-33c7-4a0b-9613-05c856fcf246
+Content-Type: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQyNjk0NzIsImV4cCI6MTY4NDg3NDI3Mn0.X8kzo1vys3ODvXj16grVPC2a753s_vhIVluYUtzT4uI
+
+###
+POST http://localhost:1337/api/v1/transaction/1/transaction_process
+Content-Type: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQyNjk0NzIsImV4cCI6MTY4NDg3NDI3Mn0.X8kzo1vys3ODvXj16grVPC2a753s_vhIVluYUtzT4uI
+
+###
+POST http://localhost:1337/api/v1/transaction/1/send_order
+Content-Type: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQyNjk0NzIsImV4cCI6MTY4NDg3NDI3Mn0.X8kzo1vys3ODvXj16grVPC2a753s_vhIVluYUtzT4uI
+
+{
+   "shipping_name": "JNT",
+   "resi": "ASOXX341dXX",
+   "desc": "TEST DECS CCCCCCCCCCCCC",
+   "evidence_pict": "TEST EVIDENCE PICT PATH"
+}
+
+
+###
+GET https://api.sandbox.midtrans.com/v2/20/status
+Accept: application/json
+Content-Type: application/json
+Authorization: Basic SB-Mid-server-U3iTv_jdlhLtdHEjGjH28LEr

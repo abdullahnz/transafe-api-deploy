@@ -1,0 +1,18 @@
+### 
+POST http://localhost:1337/api/v1/transaction/30/paymentship
+Accept: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQ1ODkxNjcsImV4cCI6MTY4NDY0MzE2N30.Aw3I4KD4qITx_5AZV8G2NUBPS1RAPwmHMFPH46JzEJU
+Authorization: Basic SB-Mid-server-U3iTv_jdlhLtdHEjGjH28LEr
+Content-Type: application/json
+
+
+###
+POST https://app.sandbox.midtrans.com/iris/api/v1/beneficiaries
+Accept: application/json
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQ1ODkxNjcsImV4cCI6MTY4NDY0MzE2N30.Aw3I4KD4qITx_5AZV8G2NUBPS1RAPwmHMFPH46JzEJU
+Authorization: Basic SB-Mid-server-U3iTv_jdlhLtdHEjGjH28LEr
+Content-Type: application/json
+
+{
+  
+}

@@ -1,0 +1,35 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - 33061:3306
+    volumes:
+      - ./proclub_app.sql:/docker-entrypoint-initdb.d/proclub_app.sql # ops, i just expose our db name to public :)
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_DOCKER_ROOT_PASSWORD}
+      - MYSQL_DATABASE=proclub_app
+    networks:
+      - transafe-api-network
+
+  transafe-api:
+    build: .
+    environment:
+      - DB_USERNAME=root
+      - DB_PASSWORD=${MYSQL_DOCKER_ROOT_PASSWORD}
+      - DB_NAME=proclub_app
+      - DB_HOST=mysql
+      - DIALECT=mysql
+      - NODE_ENV=development
+      - ACCESS_TOKEN_SECRET_KEY=${TRANSAFE_APP_SECRETKEY}
+    ports:
+      - 1337:1337
+    depends_on:
+      - mysql
+    command: /bin/sh -c "yarn sequelize db:migrate"
+    networks:
+      - transafe-api-network
+  
+networks:
+  transafe-api-network:
+    external: false

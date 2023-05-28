@@ -1,0 +1,34 @@
+### GET ALL USERS
+GET http://localhost:1337/api/v1/user
+X-Auth: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiS2V2aW4gSUQiLCJpYXQiOjE2ODQ1OTk5MTAsImV4cCI6MTY4NDY1MzkxMH0.Onh-L2vxPbxjtTOWeCrycig9UJNm4EcM5VlsJAVXvlA
+
+
+### CREATE USER
+POST http://localhost:1337/api/v1/user/create
+Content-Type: application/json
+
+{
+   "name": "John doe",
+   "username": "johndoe123",
+   "phone_number": "08214861241",
+   "email": "test@gmail.com",
+   "password": "johndoe123"
+}
+
+### GET ONE USER
+GET http://localhost:1337/api/v1/user/show/2
+
+###
+PUT http://localhost:1337/api/v1/user/update/3
+Content-Type: application/json
+
+{
+   "name": "John tol",
+   "username": "johndoe123",
+   "phone_number": "08214861241",
+   "email": "test@gmail.com"
+}
+
+###
+DELETE http://localhost:1337/api/v1/user/delete/3
+

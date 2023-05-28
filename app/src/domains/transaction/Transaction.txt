@@ -1,0 +1,29 @@
+Transaction
+   auth
+   - POST api/v1/register __DONE__
+   - POST api/v1/login __DONE__
+   main
+   - POST api/v1/transaction __DONE__
+   - GET api/v1/transaction/:transaction_id __DONE__
+   - PUT api/v1/transaction/:transaction_id __DONE__
+
+   current transaction
+   - GET api/v1/transaction/recent/:user_id __DONE__
+
+   join
+   - POST api/v1/transaction/join/:room_id __DONE__
+   
+   nego
+   - POST api/v1/transaction/:transaction_id/nego/:amount
+
+   paymentship
+   - POST api/v1/transaction/:transaction_id/paymentship __DONE__
+      body: {
+        amount: number
+        method: string
+        user_id: number
+        type: string ['in', 'out']
+      }
+
+
+   

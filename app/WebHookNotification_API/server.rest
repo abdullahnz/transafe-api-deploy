@@ -1,0 +1,8 @@
+###
+POST http://localhost:9933/notification/handling
+Content-Type: application/json
+
+{
+   "transaction": "DUMMY",
+   "redirect_url": "DUMMY"
+}
