@@ -21,5 +21,5 @@ jobs:
           # copy src to docker container XD (temp)
           script: |
             echo $(date) >> transafe-latest-update.txt
-            cd ~/transafe && git pull origin main
+            cd ~/transafe-api-deploy && git pull origin main
             docker cp app/src dffd2b2da083:/usr/src/app/  
