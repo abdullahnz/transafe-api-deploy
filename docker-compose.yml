@@ -2,8 +2,6 @@ version: '3'
 services:
   mysql:
     image: mysql:latest
-    ports:
-      - 33061:3306
     volumes:
       - ./proclub_app.sql:/docker-entrypoint-initdb.d/proclub_app.sql # ops, i just expose our db name to public :)
     environment:
